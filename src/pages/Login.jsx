@@ -8,7 +8,6 @@ import { firebaseApp } from "../firebase config";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    
   const firebaseAuth = getAuth(firebaseApp);
   const provider = new GoogleAuthProvider();
   const firebaseDb = getFirestore(firebaseApp);
@@ -17,7 +16,7 @@ const Login = () => {
 
   const login = async () => {
     const { user } = await signInWithPopup(firebaseAuth, provider);
-    console.log(user)
+    console.log(user);
     const { refreshToken, providerData } = user;
 
     localStorage.setItem("user", JSON.stringify(providerData));
