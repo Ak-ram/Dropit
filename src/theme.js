@@ -1,8 +1,8 @@
-import {extendTheme} from '@chakra-ui/react';
+import { extendTheme } from "@chakra-ui/react";
 
 const config = {
-  initialColorMode : "light",
-  useSystemColorMode : false,
-}
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
 
-export const theme = extendTheme({config})
+export const theme = extendTheme({ config });
