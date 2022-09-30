@@ -1,14 +1,13 @@
 import './App.css';
-
+import Home from './pages/Home';
+import Login from './pages/Login';
+import {Route, Routes, useNavigate} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <h1>Dropit</h1>
-       
-      </header>
-    </div>
+    <Routes>
+        <Route path='/*' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+    </Routes>
   );
 }
 
