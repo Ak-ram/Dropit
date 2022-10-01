@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const VideoPin = ()=>{
-    return <div>VideoPin</div>
-}
+const VideoPin = () => {
+  return <div>VideoPin</div>;
+};
 
-export default VideoPin
+export default VideoPin;
