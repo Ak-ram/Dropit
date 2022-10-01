@@ -1,14 +1,15 @@
 import { Button, Flex, HStack, Image } from "@chakra-ui/react";
 import React from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
 import MusicBg from "../img/musicbg.jpg";
 import { FcGoogle } from "react-icons/fc";
+
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { firebaseApp } from "../firebase config";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    
   const firebaseAuth = getAuth(firebaseApp);
   const provider = new GoogleAuthProvider();
   const firebaseDb = getFirestore(firebaseApp);
@@ -17,7 +18,6 @@ const Login = () => {
 
   const login = async () => {
     const { user } = await signInWithPopup(firebaseAuth, provider);
-    console.log(user)
     const { refreshToken, providerData } = user;
 
     localStorage.setItem("user", JSON.stringify(providerData));
