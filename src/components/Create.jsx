@@ -16,7 +16,7 @@ import Spinner from "./Spinner";
 import {getStorage, ref, uploadBytesResumable, getDownloadURL, deleteObject} from 'firebase/storage'
 import { firebaseApp } from "../firebase config";
 import AlertMsg from "./AlertMsg";
-// import { Editor } from "@tinymce/tinymce-react/lib/cjs/main/ts/components/Editor";
+import { Editor } from "@tinymce/tinymce-react/lib/cjs/main/ts/components/Editor";
 import { fetchUser } from "../utils/fetchUser";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -324,7 +324,7 @@ const Create = () => {
           )}
         </Flex>
 
-        {/* <Editor
+         <Editor
           onChange={getDescriptionValue}
           onInit={(evt, editor) => (editorRef.current = editor)}
           apiKey={process.env.REACT_APP_TINYMCE_API_KEY}
@@ -347,7 +347,7 @@ const Create = () => {
             content_css: "dark",
             skin: "oxide-dark",
           }}
-        /> */}
+        /> 
 
         <Button
           isLoading={loading}
