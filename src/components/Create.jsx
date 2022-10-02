@@ -324,7 +324,7 @@ const Create = () => {
           )}
         </Flex>
 
-         <Editor
+        <Editor
           onChange={getDescriptionValue}
           onInit={(evt, editor) => (editorRef.current = editor)}
           apiKey={process.env.REACT_APP_TINYMCE_API_KEY}
@@ -347,7 +347,7 @@ const Create = () => {
             content_css: "dark",
             skin: "oxide-dark",
           }}
-        /> 
+        />
 
         <Button
           isLoading={loading}
