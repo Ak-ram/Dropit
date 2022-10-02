@@ -1,42 +1,52 @@
+import React, { useEffect, useState } from "react";
 import { Flex } from "@chakra-ui/react";
-import React from "react";
-// import { Flex } from "@chakra-ui/react";
 import {
   Category,
-  NavBar,
-  VideoPin,
-  Feed,
   Create,
+  Feed,
+  NavBar,
   Search,
+  UserProfile,
+  VideoPinDetail,
 } from "../components";
 import { Routes, Route } from "react-router-dom";
+import { categories } from "../data";
 
 const Home = ({ user }) => {
+  const [searchTerm, setsearchTerm] = useState("");
   return (
     <>
-      <NavBar user={user} />
-      <Flex
-        direction={"column"}
-        justifyContent={"start"}
-        alignItems={"center"}
-        width={"20"}
-      >
-        <Category />
-      </Flex>
+      <NavBar user={user} setsearchTerm={setsearchTerm} />
 
-      <Flex
-        px={"4"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        width={"full"}
-      >
-        <Routes>
-          <Route path="/" element={<Feed />} />
-          <Route path="/category/:categoryId" element={<Category />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/videoDetail/:videoId" element={<VideoPin />} />
-          <Route path="/search" element={<Search />} />
-        </Routes>
+      <Flex width={"100vw"}>
+        <Flex
+          direction={"column"}
+          justifyContent="start"
+          alignItems={"center"}
+          width="5%"
+        >
+          {categories &&
+            categories.map((data) => <Category key={data.id} data={data} />)}
+        </Flex>
+
+        <Flex
+          width={"95%"}
+          px={4}
+          justifyContent="center"
+          alignItems={"center"}
+        >
+          <Routes>
+            <Route path="/" element={<Feed />} />
+            <Route path="/category/:categoryId" element={<Feed />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/videoDetail/:videoId" element={<VideoPinDetail />} />
+            <Route
+              path="/search"
+              element={<Search searchTerm={searchTerm} />}
+            />
+            <Route path="/userDetail/:userId" element={<UserProfile />} />
+          </Routes>
+        </Flex>
       </Flex>
     </>
   );
