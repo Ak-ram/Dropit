@@ -1,4 +1,4 @@
-import { firebaseApp } from "../firebase-config";
+import { firebaseApp } from "../firebase config";
 // prettier-ignore
 import {collection, deleteDoc, doc, getDoc, getDocs, orderBy, query, where} from 'firebase/firestore';
 

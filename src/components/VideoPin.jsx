@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { gertUserInfo } from "../utils/fetchData";
 import { getFirestore } from "firebase/firestore";
-import { firebaseApp } from "../firebase-config";
+import { firebaseApp } from "../firebase config";
 import moment from "moment";
 
 const avatar =
