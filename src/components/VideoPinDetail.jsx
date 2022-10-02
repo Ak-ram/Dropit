@@ -35,8 +35,8 @@ import {
 import ReactPlayer from "react-player";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import Spinner from "../Components/Spinner";
-import { firebaseApp } from "../firebase-config";
+import Spinner from "../components/Spinner";
+import { firebaseApp } from "../firebase config";
 import {
   deleteVideo,
   gertUserInfo,
