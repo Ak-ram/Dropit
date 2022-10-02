@@ -1,9 +1,12 @@
 import "./App.css";
+
+import { useEffect, useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { fetchUser, userAccessToken } from "./utils/fetchUser";
+
 function App() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();

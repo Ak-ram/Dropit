@@ -1,8 +1,15 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 // import { Flex } from "@chakra-ui/react";
-import { Category, NavBar, VideoPin,Feed,Create,Search } from "../components";
-import { Routes,Route } from "react-router-dom";
+import {
+  Category,
+  NavBar,
+  VideoPin,
+  Feed,
+  Create,
+  Search,
+} from "../components";
+import { Routes, Route } from "react-router-dom";
 
 const Home = ({ user }) => {
   return (
