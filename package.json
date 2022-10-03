@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tinymce/tinymce-react": "^4.2.0",
     "firebase": "^9.10.0",
     "framer-motion": "^6.5.1",
     "html-react-parser": "^3.0.4",
